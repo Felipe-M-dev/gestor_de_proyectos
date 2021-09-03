@@ -1,0 +1,22 @@
+<% if @project.errors.any?%>
+<div id="error_explanation" class="mt-5">
+    <h2><%= pluralize(@project.errors.count, "error") %> found: </h2>
+    <ul>
+        <% @project.errors.full_messages.each do |message|%>
+            <li><%= message%></li>
+        <%end%>
+    </ul>
+    </tr>
+    <div class="text-right container-fluid">        
+        <%= button_to "Ingrese un proyecto", "/projects/form", :id => "open-contacts-dialog-btn", :class => "btn btn-outline-success my-2 my-sm-0 ml-2", :method => :get %>
+    </div>
+    <div class="text-right container-fluid mt-2">
+        <%= button_to "Volver", "/projects/dashboard", :id => "open-contacts-dialog-btn", :class => "btn btn-outline-success my-2 my-sm-0", :method => :get %>
+    </div>
+</div>
+<% else%>
+    <h1 class="display-5 font-weight-bold text-center mt-5 pt-5">Proyecto ingresado exitosamente</h1>
+    <div class="text-center">
+        <%= button_to "Volver", "/projects/dashboard", :id => "open-contacts-dialog-btn", :class => "btn btn-outline-success my-2 my-sm-0", :method => :get %>
+    </div>
+<% end%>

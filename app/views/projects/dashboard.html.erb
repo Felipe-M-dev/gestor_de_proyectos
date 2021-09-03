@@ -1,0 +1,35 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="/projects/dashboard">Gestor de Proyectos</a>
+    <form class="form-inline">
+        <input class="form-control mr-sm-3" type="search" name="state" placeholder="Ingrese el estado" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+    <div class="text-center">
+        <%= button_to "Crear un proyecto", "/projects/form", :id => "open-contacts-dialog-btn", :class => "btn btn-outline-success my-2 my-sm-0 ml-2", :method => :get %>
+    </div>
+</nav>
+
+
+
+<div class="container">
+    <tr>
+    <h2 class="display-5 text-center font-weight-bold mt-5">Proyectos</h2>
+    <table class="table">
+        <tr>
+            <th>Nombre proyecto</th>
+            <th>Descripción</th>
+            <th>Fecha de inicio</th>
+            <th>Fecha de término</th>
+            <th>Estado</th>
+        </tr>
+        <% @projects.each do |project|%>
+        <tr>
+            <td><%= project.name_project %></td>
+            <td><%= project.description %></td>
+            <td><%= project.date_start %></td>
+            <td><%= project.date_finish %></td>
+            <td><%= project.state %></td>
+        </tr>
+        <% end%>
+    </table>
+</div>
