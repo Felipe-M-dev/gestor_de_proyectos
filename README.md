@@ -18,3 +18,11 @@ Historias de usuario:
 - El proyecto debe ser subido a heroku y se debe ingresar el link para la evaluación.
 
 **Nota:** Se recomienda usar un tag `select` para las funcionalidades relacionadas con el campo estado.
+
+> Solución:
+
+**URL:** https://fmartinez-gestor-proyectos.herokuapp.com/
+
+**user:** sixto
+
+**Password:** sixto1234
